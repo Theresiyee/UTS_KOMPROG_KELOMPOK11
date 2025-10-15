@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class UTSKOMPRO11 {
-
+public class nilaimahasiswa {
     static class Mahasiswa {
         private String nama;
         private String npm;
@@ -51,6 +50,7 @@ public class UTSKOMPRO11 {
                 System.out.println("NPM      : " + m.getNpm());
                 System.out.println("Rata-rata: " + String.format("%.2f", m.hitungRataRata()));
                 System.out.println("Status   : " + (m.isLulus() ? "Lulus" : "Tidak Lulus"));
+                System.out.println(" ");
             }
         }
     }
@@ -60,6 +60,8 @@ public class UTSKOMPRO11 {
         System.out.print("Masukkan jumlah mahasiswa: ");
         int jumlah = input.nextInt();
         input.nextLine();
+        System.out.println("---------------------------------------------------------------------");
+        System.out.println("");
         for (int i = 0; i < jumlah; i++) {
             System.out.println("\nMahasiswa ke-" + (i + 1));
             System.out.print("Nama: ");
@@ -80,7 +82,9 @@ public class UTSKOMPRO11 {
             Mahasiswa m = new Mahasiswa(nama, npm, tugas, uts, uas);
             kelas.tambahMahasiswa(m);
         }
+        System.out.println("");
+        System.out.println("----------------------------------------------------------");
+        System.out.println("");
         kelas.tampilkanDaftarMahasiswa();
     }
-}   
 }
